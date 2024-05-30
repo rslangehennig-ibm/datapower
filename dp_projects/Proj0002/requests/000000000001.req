@@ -1,0 +1,18 @@
+## ----------------------------------
+## Example PassThru MPG Request File
+## ----------------------------------
+Filename = 000000000001.req
+Requester = rlange@ibm.com
+TargetDomain = QA
+TemplateName = PassThruMPG
+JiraTicket = http://www.google.com
+
+## -----------------------------------------------------
+## Parameters for the PassThru MPG Template
+## The parameters must match to the template you provide
+## -----------------------------------------------------
+SERVICE_NAME = OLBB2PHService
+SERVICE_FLOW = OLBB -> DP -> Personalized Homepage Service
+BACKEND_URL = https://sample.MPGBackend.com:7543/uri1/uri2
+SERVICE_TIMEOUT = 30
+SERVICE_PAYLOAD_SIZE = 400000

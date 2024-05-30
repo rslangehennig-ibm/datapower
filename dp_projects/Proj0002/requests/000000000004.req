@@ -1,0 +1,16 @@
+# ------------------------------
+# Example Generic Request File
+# ------------------------------
+Filename = 000000000004.req
+Requester = developer@bmo.com
+TargetDomain = DEV
+TemplateName = GenericMPG
+JiraTicket = http://www.google.com
+
+##
+## Parameters for the Template
+## The parameters must match to the template you provide
+##
+SERVICE_NAME = AWSConsumerMPG
+FROM_DIRECTORY = artifacts/AWSConsumerMPG/DEV/ALERTS
+TO_DIRECTORY = local:///AWSConsumerMPG/ALERTS

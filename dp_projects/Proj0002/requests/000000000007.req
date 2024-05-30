@@ -1,0 +1,23 @@
+# ---------------------------------
+# Example AWS2Channel Request File
+# ---------------------------------
+Filename = 000000000007.req
+Requester = developer@bmo.com
+TargetDomain = DEV
+TemplateName = AWS2ChannelMPG
+JiraTicket = http://www.google.com
+
+## -----------------------------------------------------
+## Parameters for the AWS2Channel template
+## The parameters must match to the template you provide
+## -----------------------------------------------------
+SERVICE_NAME = AWSConsumer
+SERVICE_SUMMARY = To handle the traffic coming from pass through consumer to DP
+SERVICEFSH_PORT = 7716
+SERVICE_CLIENTOUID = 26777bcPl4QLE
+
+## -----------------------------------
+## Parameters for the Directory Upload
+## -----------------------------------
+FROM_DIRECTORY = artifacts/mpg/SmartcoreServicesV1/AWSConsumerMPG/xsl
+TO_DIRECTORY = local:///mpg/SmartcoreServicesV1/AWSConsumerMPG/xsl

@@ -1,0 +1,19 @@
+# --------------------------------------
+# Example ExportImportMPG Request File
+# --------------------------------------
+Filename = 000000000008.req
+Requester = developer@bmo.com
+TargetDomain = QA
+TemplateName = ExportImportMPG
+JiraTicket = http://www.google.com
+
+## -----------------------------------------------------
+## Parameters for the ExportImport model
+## The parameters must match to the template you provide
+## -----------------------------------------------------
+METADATA_DOMAIN = Build-Metadata
+DEPLOYMENT_POLICY = AUTODP_deployment_policy
+DEPLOYMENT_POLICY_VARIABLES = AUTODP_deployment_policy_variables
+SOURCE_DOMAIN = DEV
+SOURCE_SERVICENAME = RandyDeployMPG
+OBJECT_CLASS_NAME = MultiProtocolGateway

@@ -1,0 +1,16 @@
+## ---------------------------------
+## Example Generic MPG Request File
+## --------------------------------
+Filename = 0415202253.req
+Requester = developer@bmo.com
+TargetDomain = DEV
+TemplateName = GenericMPG
+
+##
+## Parameters for the Template
+## The parameters must match to the template you provide
+##
+GIT_REPOSITORY = https://github.com/rslangehennig/datapower-generic.git
+SERVICE_NAME = AWSConsumerMPG
+FROM_DIRECTORY = datapower-generic/AWSConsumerMPG/DEV/ALERTS
+TO_DIRECTORY = local:///AWSConsumerMPG/ALERTS
