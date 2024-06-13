@@ -16,7 +16,7 @@ jobs:
     - name: Create Component Version
       uses: HCL-TECH-SOFTWARE/devops-deploy-createcomponentversion-action@v1.0
       with:
-        component: 'AUTODP-REQUEST-ENGINE'
+        component: 'AUTODP-REQUEST-ENGINE-BOGUS'
         versionname: '${{ env.short_commit_id }}:${{ github.event.head_commit.message }}'
         description: 'Commit ID: ${{ github.event.head_commit.id }} Repository URL: ${{ github.repositoryUrl }}'
         link: '${{ github.server_url }}/${{ github.repository }}/commit/${{ github.event.head_commit.id }}'
