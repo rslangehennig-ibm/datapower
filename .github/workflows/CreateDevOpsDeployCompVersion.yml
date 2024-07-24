@@ -11,7 +11,9 @@ jobs:
 
     steps:
     - name: Checkout files to workspace
+      id: create-artifacts
       uses: actions/checkout@v4
+      run: pwd && ls -al
       with:
         sparse-checkout: .
     - name: Set short_commit_id
