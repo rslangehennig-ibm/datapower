@@ -11,11 +11,13 @@ jobs:
 
     steps:
     - name: Checkout files to workspace
-      id: create-artifacts
+      id: checkout-artifacts
       uses: actions/checkout@v4
-      run: pwd && ls -al
       with:
         sparse-checkout: .
+    - name: Create artifacts
+      id: create-artifacts
+      run: pwd && ls -al
     - name: Set short_commit_id
       id: vars
       run: echo "short_commit_id=$(echo ${{ github.event.head_commit.id }} | cut -c1-7)" >> "$GITHUB_ENV"
