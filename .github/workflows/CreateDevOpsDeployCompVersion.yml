@@ -15,11 +15,9 @@ jobs:
       uses: actions/checkout@v4
       with:
         sparse-checkout: |
-          .github
           dp_projects
           dp_releases
           dp_templates
-          README.txt
     - name: Create artifacts
       id: create-artifacts
       run: pwd && ls -al
