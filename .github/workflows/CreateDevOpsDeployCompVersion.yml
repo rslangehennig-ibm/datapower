@@ -24,7 +24,7 @@ jobs:
         versionname: '${{ env.short_commit_id }}:${{ github.event.head_commit.message }}'
         description: 'Commit ID: ${{ github.event.head_commit.id }} Repository URL: ${{ github.repositoryUrl }}'
         link: '${{ github.server_url }}/${{ github.repository }}/commit/${{ github.event.head_commit.id }}'
-        base: ${{ github.workspace }}
+        base: /home/runner/work/datapower/datapower
         hostname: '169.62.212.57'
         port: '8444'
         authToken: '${{ secrets.DEVOPS_DEPLOY_AUTHTOKEN }}'
