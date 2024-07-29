@@ -20,7 +20,7 @@ jobs:
           dp_templates
     - name: Create artifacts
       id: create-artifacts
-      run: pwd && ls -al
+      run: pwd && ls -al && mkdir comp-version-artifacts && cp -rp dp_* comp-version-artifacts
     - name: Set short_commit_id
       id: vars
       run: echo "short_commit_id=$(echo ${{ github.event.head_commit.id }} | cut -c1-7)" >> "$GITHUB_ENV"
@@ -31,8 +31,7 @@ jobs:
         versionname: '${{ env.short_commit_id }}:${{ github.event.head_commit.message }}'
         description: 'Commit ID: ${{ github.event.head_commit.id }} Repository URL: ${{ github.repositoryUrl }}'
         link: '${{ github.server_url }}/${{ github.repository }}/commit/${{ github.event.head_commit.id }}'
-        base: '/home/runner/work/datapower/datapower'
-        include: '*/dp_*, */dp_*/*'
+        base: '/home/runner/work/datapower/datapower/comp-version-artifacts'
         hostname: '169.62.212.57'
         port: '8444'
         authToken: '${{ secrets.DEVOPS_DEPLOY_AUTHTOKEN }}'
