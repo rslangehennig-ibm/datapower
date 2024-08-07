@@ -1,0 +1,22 @@
+# -----------------------------------------
+# Example ConfigFileUpload Request File
+# ----------------------------------------
+Filename = 000000000026.req
+Requester = rlange@ibm.com
+TargetDomain = DEV
+TemplateName = ConfigFileUpload
+JiraTicket = http://www.google.com
+
+## -----------------------------------------------------------------------------
+## Parameters for the Configuration .cfg File to Upload 
+## The parameters will be used to replace @@tokens@@ in the file prior to upload 
+## -----------------------------------------------------------------------------
+CUSTOMERREFERENCEDATAMANAGEMENT_STAGE = sandbox
+CUSTOMERREFERENCEDATAMANAGEMENT_HOST = it5cd2slgf.execute-api.us-east-1.amazonaws.com
+CUSTOMERREFERENCEDATAMANAGEMENT_KEY = tvHKIwGVhbMnlixIrUiX3EtA2iXhYq94W45nLk52
+
+## ------------------------------
+## Parameters for the File Upload
+## -----------------------------
+FROM_DIRECTORY = artifacts/mpg/AWSProxyMPG/ISAM2AWSProxyMPG/config/CUSTOMERREFERENCEDATAMANAGEMENT
+TO_DIRECTORY = local:///mpg/AWSProxyMPG/ISAM2AWSProxyMPG/config/CUSTOMERREFERENCEDATAMANAGEMENT
